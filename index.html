@@ -3,347 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Paulo Henrique Sampaio — Product & Software Engineer building AI-native products, SaaS platforms and business automation systems." />
+  <meta name="description" content="Paulo Henrique Sampaio — Product & Software Engineer building AI-native systems, full-stack products, business automation and production software." />
   <meta name="theme-color" content="#070b14" />
+  <meta property="og:title" content="Paulo Henrique Sampaio — Product & Software Engineer" />
+  <meta property="og:description" content="AI systems, full-stack product engineering, automation, mobile/computer vision and production software." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apolo1987.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Paulo Henrique Sampaio — Product & Software Engineer</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Paulo Henrique Sampaio",
+    "jobTitle": "Product & Software Engineer",
+    "url": "https://apolo1987.github.io/",
+    "sameAs": [
+      "https://github.com/apolo1987",
+      "https://www.linkedin.com/in/paulohsampaio"
+    ],
+    "address": {"@type": "PostalAddress", "addressLocality": "Fortaleza", "addressCountry": "BR"},
+    "knowsAbout": ["Product Engineering", "Software Engineering", "Artificial Intelligence", "TypeScript", "Next.js", "Python", "FastAPI", "PostgreSQL", "Supabase", "Business Automation"]
+  }
+  </script>
   <style>
     :root {
-      --bg: #070b14;
-      --panel: rgba(14, 21, 36, .72);
-      --panel-strong: #0d1525;
-      --text: #f7f9fc;
-      --muted: #9aa8bd;
-      --line: rgba(255,255,255,.09);
-      --blue: #6ea8fe;
-      --cyan: #67e8f9;
-      --violet: #a78bfa;
-      --green: #5ee9a2;
-      --shadow: 0 24px 80px rgba(0,0,0,.32);
-      --radius: 24px;
+      --bg:#060913; --bg2:#0a1020; --panel:rgba(14,22,39,.78); --panel2:#0d1628;
+      --text:#f7f9fc; --muted:#98a8bf; --line:rgba(255,255,255,.09);
+      --cyan:#67e8f9; --blue:#79a8ff; --violet:#b59bff; --green:#5ee9a2;
+      --amber:#f7c873; --shadow:0 30px 90px rgba(0,0,0,.34); --radius:26px;
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 15% -10%, rgba(103,232,249,.16), transparent 30%),
-        radial-gradient(circle at 85% 0%, rgba(167,139,250,.16), transparent 28%),
-        radial-gradient(circle at 70% 70%, rgba(110,168,254,.08), transparent 36%),
-        var(--bg);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .18;
-      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(to bottom, black, transparent 82%);
-    }
-
-    a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1160px, calc(100% - 36px)); margin: 0 auto; position: relative; z-index: 1; }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 24px 0;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-    }
-
-    .brand { font-weight: 800; letter-spacing: -.04em; font-size: 1rem; }
-    .brand span { color: var(--cyan); }
-    .navlinks { display: flex; gap: 24px; color: var(--muted); font-size: .9rem; }
-    .navlinks a:hover { color: var(--text); }
-
-    .hero {
-      min-height: 78vh;
-      display: grid;
-      place-items: center;
-      padding: 80px 0 72px;
-    }
-
-    .hero-inner { max-width: 980px; }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 13px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.03);
-      color: #cbd5e1;
-      font-size: .82rem;
-      letter-spacing: .02em;
-    }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 20px var(--green); }
-
-    h1 {
-      margin: 26px 0 22px;
-      font-size: clamp(3rem, 7vw, 6.8rem);
-      line-height: .98;
-      letter-spacing: -.065em;
-      max-width: 1050px;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg, var(--cyan), var(--blue), var(--violet));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .lead {
-      max-width: 800px;
-      color: #b5c2d5;
-      font-size: clamp(1.08rem, 2vw, 1.36rem);
-      margin-bottom: 32px;
-    }
-
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 0 18px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      font-weight: 700;
-      font-size: .92rem;
-      transition: .2s ease;
-      background: rgba(255,255,255,.03);
-    }
-    .btn.primary { background: var(--text); color: #08101e; border-color: transparent; }
-    .btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.22); }
-
-    .signal-row {
-      margin-top: 56px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
-    .signal {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-      background: rgba(255,255,255,.025);
-    }
-    .signal strong { display: block; font-size: 1.05rem; margin-bottom: 2px; }
-    .signal span { color: var(--muted); font-size: .82rem; }
-
-    section { padding: 82px 0; }
-    .section-kicker { color: var(--cyan); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 800; }
-    h2 { margin: 10px 0 14px; font-size: clamp(2rem, 4.5vw, 3.65rem); letter-spacing: -.045em; line-height: 1.05; }
-    .section-copy { color: var(--muted); max-width: 750px; margin-bottom: 34px; font-size: 1.02rem; }
-
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.018));
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-      transition: .25s ease;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(103,232,249,.22); }
-    .card::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      right: -90px;
-      top: -90px;
-      background: radial-gradient(circle, rgba(103,232,249,.11), transparent 70%);
-    }
-
-    .tag { color: var(--cyan); font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
-    .card h3 { font-size: 1.55rem; margin: 10px 0 10px; letter-spacing: -.03em; }
-    .card p { color: var(--muted); margin: 0 0 18px; }
-    .stack { display: flex; flex-wrap: wrap; gap: 7px; }
-    .pill { border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; color: #c5d0df; font-size: .72rem; background: rgba(255,255,255,.025); }
-    .link { display: inline-block; margin-top: 20px; color: var(--cyan); font-weight: 700; font-size: .88rem; }
-
-    .skills { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
-    .skill-panel { padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); }
-    .skill-panel h3 { margin-top: 0; letter-spacing: -.025em; }
-    .skill-list { display: flex; flex-wrap: wrap; gap: 9px; }
-    .skill-list span { border: 1px solid var(--line); padding: 9px 11px; border-radius: 10px; font-size: .82rem; color: #d6dfeb; background: rgba(255,255,255,.025); }
-
-    .flow { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #cbd5e1; font-size: .84rem; white-space: pre; overflow-x: auto; margin: 0; line-height: 1.75; }
-
-    .cta {
-      padding: 46px;
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      background: linear-gradient(135deg, rgba(103,232,249,.08), rgba(167,139,250,.08));
-      text-align: center;
-    }
-    .cta h2 { max-width: 760px; margin-left: auto; margin-right: auto; }
-    .cta p { color: var(--muted); max-width: 620px; margin: 0 auto 26px; }
-    .cta .actions { justify-content: center; }
-
-    footer { padding: 30px 0 48px; display: flex; justify-content: space-between; color: #77869b; font-size: .82rem; border-top: 1px solid var(--line); }
-
-    @media (max-width: 800px) {
-      .navlinks { display: none; }
-      .hero { min-height: auto; padding-top: 80px; }
-      .signal-row { grid-template-columns: repeat(2,1fr); }
-      .grid, .skills { grid-template-columns: 1fr; }
-      .cta { padding: 30px 20px; }
-      footer { flex-direction: column; gap: 6px; }
-    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--text);background:
+      radial-gradient(circle at 8% -10%,rgba(103,232,249,.16),transparent 30%),
+      radial-gradient(circle at 92% 0%,rgba(181,155,255,.14),transparent 28%),
+      radial-gradient(circle at 70% 68%,rgba(121,168,255,.08),transparent 34%),var(--bg);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 84%)}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 36px));margin:0 auto;position:relative;z-index:1}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:linear-gradient(180deg,rgba(6,9,19,.86),rgba(6,9,19,.54),transparent)}
+    .brand{font-weight:900;letter-spacing:-.04em}.brand span{color:var(--cyan)}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:.87rem}.navlinks a:hover{color:var(--text)}
+    .hero{min-height:84vh;display:grid;place-items:center;padding:82px 0 68px}.hero-inner{max-width:1040px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);color:#d7e0ec;font-size:.82rem}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 22px var(--green)}
+    h1{margin:26px 0 22px;font-size:clamp(3rem,7vw,6.9rem);line-height:.96;letter-spacing:-.067em;max-width:1090px}.gradient{background:linear-gradient(90deg,var(--cyan),var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{max-width:860px;color:#bac6d8;font-size:clamp(1.08rem,2vw,1.38rem);margin-bottom:30px}.actions{display:flex;flex-wrap:wrap;gap:11px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:14px;border:1px solid var(--line);font-weight:780;font-size:.9rem;transition:.2s ease;background:rgba(255,255,255,.035)}.btn.primary{background:var(--text);color:#08101e;border-color:transparent}.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.24)}
+    .signal-row{margin-top:50px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.signal{border:1px solid var(--line);border-radius:19px;padding:18px;background:rgba(255,255,255,.025)}.signal strong{display:block;font-size:1.1rem;margin-bottom:2px}.signal span{color:var(--muted);font-size:.79rem}
+    section{padding:82px 0}.section-kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:.17em;font-size:.71rem;font-weight:850}h2{margin:10px 0 14px;font-size:clamp(2rem,4.5vw,3.7rem);letter-spacing:-.047em;line-height:1.04}.section-copy{color:var(--muted);max-width:780px;margin-bottom:34px;font-size:1.02rem}
+    .feature{border:1px solid var(--line);border-radius:32px;padding:34px;background:linear-gradient(145deg,rgba(103,232,249,.06),rgba(181,155,255,.035),rgba(255,255,255,.015));box-shadow:var(--shadow);position:relative;overflow:hidden}.feature:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-170px;top:-170px;background:radial-gradient(circle,rgba(103,232,249,.15),transparent 68%)}
+    .feature-top{display:flex;justify-content:space-between;gap:30px;align-items:start}.feature h3{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.05em;margin:7px 0 12px}.status{display:inline-flex;align-items:center;gap:8px;color:#d8fdeb;font-size:.78rem;border:1px solid rgba(94,233,162,.25);padding:7px 10px;border-radius:999px;background:rgba(94,233,162,.06)}.status i{width:7px;height:7px;border-radius:50%;background:var(--green)}
+    .feature p{color:#b6c2d4;max-width:820px}.proof{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0}.proof div{padding:14px;border:1px solid var(--line);border-radius:15px;background:rgba(0,0,0,.12)}.proof strong{display:block;font-size:1.12rem}.proof span{color:var(--muted);font-size:.76rem}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.017));box-shadow:var(--shadow);position:relative;overflow:hidden;transition:.25s ease}.card:hover{transform:translateY(-4px);border-color:rgba(103,232,249,.22)}.tag{color:var(--cyan);font-size:.72rem;font-weight:850;text-transform:uppercase;letter-spacing:.14em}.card h3{font-size:1.5rem;margin:9px 0 9px;letter-spacing:-.03em}.card p{color:var(--muted);margin:0 0 17px}.stack{display:flex;flex-wrap:wrap;gap:7px}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:#c9d4e3;font-size:.71rem;background:rgba(255,255,255,.025)}.link{display:inline-block;margin-top:18px;color:var(--cyan);font-weight:760;font-size:.86rem}
+    .mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.mini{border:1px solid var(--line);border-radius:22px;padding:24px;background:var(--panel)}.mini h3{margin:4px 0 8px;font-size:1.25rem}.mini p{color:var(--muted);font-size:.92rem;margin:0}.mini .link{margin-top:14px}
+    .experience{display:grid;grid-template-columns:.72fr 1.28fr;gap:40px}.timeline{display:grid;gap:20px}.role{border-left:1px solid var(--line);padding-left:20px;position:relative}.role:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--cyan);position:absolute;left:-5px;top:8px;box-shadow:0 0 18px rgba(103,232,249,.6)}.role small{color:var(--muted)}.role h3{margin:4px 0 5px;font-size:1.2rem}.role p{margin:0;color:#b5c1d2;font-size:.92rem}
+    .skills{display:grid;grid-template-columns:1.08fr .92fr;gap:18px}.skill-panel{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.skill-panel h3{margin-top:0}.skill-list{display:flex;flex-wrap:wrap;gap:9px}.skill-list span{border:1px solid var(--line);padding:8px 10px;border-radius:10px;font-size:.8rem;color:#d6dfeb;background:rgba(255,255,255,.024)}.flow{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#cbd5e1;font-size:.82rem;white-space:pre;overflow-x:auto;margin:0;line-height:1.75}
+    .ventures{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.venture{border:1px solid var(--line);border-radius:22px;padding:24px;background:rgba(255,255,255,.025)}.venture .vmark{font-size:.72rem;color:var(--violet);text-transform:uppercase;letter-spacing:.14em;font-weight:800}.venture h3{margin:7px 0 7px}.venture p{color:var(--muted);font-size:.9rem;margin:0}
+    .mobility{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}.mobility .box{border:1px solid var(--line);border-radius:24px;padding:28px;background:var(--panel)}.language{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:10px 0}.language:last-child{border-bottom:0}.language span:last-child{color:var(--muted)}
+    .cta{padding:48px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(135deg,rgba(103,232,249,.08),rgba(181,155,255,.08));text-align:center}.cta h2{max-width:800px;margin-left:auto;margin-right:auto}.cta p{color:var(--muted);max-width:680px;margin:0 auto 25px}.cta .actions{justify-content:center}
+    footer{padding:30px 0 48px;display:flex;justify-content:space-between;color:#77869b;font-size:.8rem;border-top:1px solid var(--line)}
+    .reveal{opacity:0;transform:translateY(14px);transition:.55s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.signal-row,.proof{grid-template-columns:repeat(2,1fr)}.grid,.skills,.experience,.mobility{grid-template-columns:1fr}.mini-grid,.ventures{grid-template-columns:1fr}.feature-top{display:block}.navlinks{display:none}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.hero{padding-top:70px}.signal-row,.proof{grid-template-columns:1fr}section{padding:64px 0}.feature,.card,.skill-panel,.cta{padding:22px}h1{font-size:clamp(2.75rem,15vw,4.3rem)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.card{transition:none}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav>
-      <a class="brand" href="#top">PH<span>.</span>ENGINEERING</a>
-      <div class="navlinks">
-        <a href="#work">Work</a>
-        <a href="#engineering">Engineering</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <a class="brand" href="#top">PAULO<span>.DEV</span></a>
+      <div class="navlinks"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#ventures">Ventures</a><a href="#contact">Contact</a></div>
     </nav>
 
     <main id="top">
       <section class="hero">
         <div class="hero-inner">
-          <div class="eyebrow"><span class="dot"></span> Open to international & remote opportunities</div>
-          <h1>Product engineer building <span class="gradient">AI-native systems</span> that solve real business problems.</h1>
-          <p class="lead">I'm Paulo Henrique Sampaio. I work across product thinking, UX, full-stack engineering, AI integrations, automation, reliability and deployment — turning ambiguous operational problems into working software.</p>
+          <div class="eyebrow"><span class="dot"></span> Fortaleza, Brazil · Open to relocation & international opportunities</div>
+          <h1>I build <span class="gradient">AI-native products</span> that move real work forward.</h1>
+          <p class="lead">I'm Paulo Henrique Sampaio — a Product & Software Engineer working across product thinking, UX, full-stack engineering, AI automation, reliability and deployment. My strongest work turns messy operational problems into production systems with explicit boundaries between reasoning, authorization and execution.</p>
           <div class="actions">
-            <a class="btn primary" href="#work">Explore my work →</a>
+            <a class="btn primary" href="#work">View selected work →</a>
+            <a class="btn" href="resume.html">Resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/paulohsampaio" target="_blank" rel="noreferrer">LinkedIn</a>
             <a class="btn" href="https://github.com/apolo1987" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn" href="mailto:arqpaulosampaio@gmail.com">Email me</a>
           </div>
-
           <div class="signal-row">
-            <div class="signal"><strong>AI Systems</strong><span>Agentic workflows & integrations</span></div>
-            <div class="signal"><strong>Full Stack</strong><span>Frontend, backend & data</span></div>
-            <div class="signal"><strong>Product Engineering</strong><span>From problem to production</span></div>
-            <div class="signal"><strong>Design + Code</strong><span>UX thinking with engineering depth</span></div>
+            <div class="signal"><strong>HIRO 7.0</strong><span>Production Company Autopilot</span></div>
+            <div class="signal"><strong>985 tests</strong><span>Recorded production validation</span></div>
+            <div class="signal"><strong>3 languages</strong><span>Portuguese · English · Spanish</span></div>
+            <div class="signal"><strong>5+ years</strong><span>Digital products, design & client delivery</span></div>
           </div>
         </div>
       </section>
 
-      <section id="work">
-        <div class="section-kicker">Selected work</div>
-        <h2>Products, not tutorial projects.</h2>
-        <p class="section-copy">My strongest projects combine software architecture with practical product constraints: business workflows, external services, real data, approval boundaries and production reliability.</p>
-
-        <div class="grid">
-          <article class="card">
-            <div class="tag">Flagship · Agentic platform</div>
-            <h3>HIRO / Hyper OS</h3>
-            <p>An AI-native business operations platform coordinating commercial, client, production, finance, files, meetings and personal operating context through bounded agentic workflows.</p>
-            <div class="stack">
-              <span class="pill">TypeScript</span><span class="pill">Next.js</span><span class="pill">Supabase</span><span class="pill">PostgreSQL</span><span class="pill">AI</span><span class="pill">HMAC</span><span class="pill">RBAC</span><span class="pill">Idempotency</span>
+      <section id="work" class="reveal">
+        <div class="section-kicker">Flagship product</div>
+        <div class="feature">
+          <div class="feature-top">
+            <div>
+              <div class="status"><i></i> PRODUCTION · HIRO 7.0</div>
+              <h3>HIRO / Hyper OS</h3>
+              <p>An AI-native business operations platform and Company Autopilot built for real operational work: commercial, content, projects, meetings, team orchestration, finance, approvals, internal automation, observability and recovery.</p>
             </div>
-            <span class="link">Private commercial project · walkthrough available</span>
-          </article>
+          </div>
+          <div class="proof">
+            <div><strong>202</strong><span>automated test files</span></div>
+            <div><strong>985</strong><span>tests passing in recorded deploy validation</span></div>
+            <div><strong>0</strong><span>runtime errors in recorded post-deploy scan</span></div>
+            <div><strong>7.0</strong><span>Company Autopilot Web in production</span></div>
+          </div>
+          <div class="stack">
+            <span class="pill">TypeScript</span><span class="pill">Next.js</span><span class="pill">React</span><span class="pill">Supabase</span><span class="pill">PostgreSQL</span><span class="pill">AI Agents</span><span class="pill">RBAC</span><span class="pill">HMAC</span><span class="pill">Idempotency</span><span class="pill">Durable Work</span><span class="pill">Recovery</span><span class="pill">Tauri/Desktop</span>
+          </div>
+          <p style="margin-top:20px"><strong>Engineering focus:</strong> bounded automation, capability contracts, workspace/owner isolation, human approval for sensitive effects, replay protection, stale-state checks, durable internal work, reconciliation and exception-based supervision. Chrome/Desktop companion foundations extend approved local context without creating a second business authority layer.</p>
+          <a class="link" href="https://hyper-os-teal.vercel.app/hiro" target="_blank" rel="noreferrer">Production surface (access-controlled) →</a>
+        </div>
+      </section>
 
+      <section class="reveal">
+        <div class="section-kicker">Selected engineering work</div>
+        <h2>Different problems. Different stacks.</h2>
+        <p class="section-copy">I deliberately keep the portfolio broader than one framework: agentic systems, Python backends, business workflow automation, Android/computer vision and commercial web products.</p>
+        <div class="grid">
           <article class="card">
             <div class="tag">Mobile · Computer vision</div>
             <h3>Deckora</h3>
-            <p>Android-focused Magic: The Gathering companion exploring visual-first card scanning, native OCR, ML Kit recognition and a mobile collection workflow.</p>
-            <div class="stack">
-              <span class="pill">Android</span><span class="pill">Java</span><span class="pill">ML Kit</span><span class="pill">OCR</span><span class="pill">Supabase</span><span class="pill">GitHub Actions</span>
-            </div>
-            <span class="link">Private project · case study in preparation</span>
+            <p>Android-focused Magic: The Gathering scanner and collection experience using camera workflows, native OCR and ML Kit recognition.</p>
+            <div class="stack"><span class="pill">Android</span><span class="pill">Java</span><span class="pill">ML Kit</span><span class="pill">OCR</span><span class="pill">Supabase</span><span class="pill">GitHub Actions</span></div>
+            <span class="link">Private product · technical walkthrough available</span>
           </article>
-
           <article class="card">
-            <div class="tag">SaaS · Python backend</div>
-            <h3>ZapCRM</h3>
-            <p>A WhatsApp-first CRM SaaS foundation with lead pipeline, campaigns, appointments, AI-assisted qualification and asynchronous background processing.</p>
-            <div class="stack">
-              <span class="pill">Python</span><span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">Redis</span><span class="pill">Celery</span><span class="pill">React</span><span class="pill">Docker</span>
-            </div>
+            <div class="tag">SaaS foundation · Python</div>
+            <h3>ZapCRM / HyperZap</h3>
+            <p>WhatsApp-first CRM foundation combining pipeline, campaigns, appointments, async jobs and AI-assisted lead qualification with human handoff.</p>
+            <div class="stack"><span class="pill">Python</span><span class="pill">FastAPI</span><span class="pill">PostgreSQL</span><span class="pill">SQLAlchemy</span><span class="pill">Redis</span><span class="pill">Celery</span><span class="pill">React</span></div>
             <a class="link" href="https://github.com/apolo1987/zapcrm" target="_blank" rel="noreferrer">View public repository →</a>
           </article>
-
           <article class="card">
             <div class="tag">Business workflow · Automation</div>
             <h3>Registration & Document Automation</h3>
-            <p>A real operational system built around structured registrations, validation, document/data processing and Google service integrations.</p>
-            <div class="stack">
-              <span class="pill">Next.js</span><span class="pill">TypeScript</span><span class="pill">React</span><span class="pill">Google APIs</span><span class="pill">Zod</span><span class="pill">XLSX</span>
-            </div>
-            <span class="link">Private operational project</span>
+            <p>A real operational workflow around structured registrations, validation, Google APIs, document/data processing and XLSX handling.</p>
+            <div class="stack"><span class="pill">Next.js</span><span class="pill">TypeScript</span><span class="pill">React</span><span class="pill">Google APIs</span><span class="pill">Zod</span><span class="pill">XLSX</span></div>
+            <span class="link">Private operational application</span>
+          </article>
+          <article class="card">
+            <div class="tag">Web product · Conversion</div>
+            <h3>Healthcare & Professional Web Products</h3>
+            <p>Commercial websites and landing experiences where product thinking, UX, analytics, SEO and conversion meet frontend delivery.</p>
+            <div class="stack"><span class="pill">Next.js</span><span class="pill">React</span><span class="pill">SEO</span><span class="pill">Analytics</span><span class="pill">Responsive UX</span><span class="pill">Vercel</span></div>
           </article>
         </div>
       </section>
 
-      <section id="engineering">
-        <div class="section-kicker">Engineering mindset</div>
-        <h2>I care about what happens after the demo.</h2>
-        <p class="section-copy">I like systems where intelligence and automation remain bounded by explicit authorization, recoverable workflows and observable runtime behavior.</p>
+      <section class="reveal">
+        <div class="section-kicker">Selected client delivery</div>
+        <h2>Software that reached real users.</h2>
+        <div class="mini-grid">
+          <article class="mini"><div class="tag">Healthcare</div><h3>Dra. Luciana Araújo</h3><p>Conversion-oriented healthcare website and procedure landing experiences with custom domain and production deployment.</p><a class="link" href="https://draluaraujo.com" target="_blank" rel="noreferrer">View live site →</a></article>
+          <article class="mini"><div class="tag">International web</div><h3>Dr. Henrique Miranda</h3><p>Multilingual PT/EN/ES professional website with lead capture, SEO structure and consent-aware analytics.</p><a class="link" href="https://henrique-miranda-psicologo.vercel.app" target="_blank" rel="noreferrer">View live site →</a></article>
+          <article class="mini"><div class="tag">Brand + frontend</div><h3>Priscila Lemos / Ellorya</h3><p>Psychology and personal-brand web presence combining visual strategy, content direction and frontend execution.</p><a class="link" href="https://priscilafloreser.com.br" target="_blank" rel="noreferrer">View live site →</a></article>
+        </div>
+      </section>
 
-        <div class="skills">
-          <div class="skill-panel">
-            <h3>Technology</h3>
-            <div class="skill-list">
-              <span>TypeScript</span><span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span><span>FastAPI</span><span>NestJS</span><span>PostgreSQL</span><span>Supabase</span><span>Redis</span><span>Celery</span><span>Docker</span><span>REST APIs</span><span>OAuth</span><span>JWT</span><span>Webhooks</span><span>Android</span><span>ML Kit</span><span>GitHub Actions</span><span>Vercel</span><span>Figma</span>
-            </div>
-          </div>
-          <div class="skill-panel">
-            <h3>How I structure complex AI workflows</h3>
-            <pre class="flow">Context / Memory
-        ↓
-AI reasoning
-        ↓
-Capability contract
-        ↓
-Policy & authorization
-        ↓
-Workflow / idempotency
-        ↓
-Safe execution
-        ↓
-Audit & outcome</pre>
+      <section id="experience" class="reveal">
+        <div class="experience">
+          <div><div class="section-kicker">Experience</div><h2>Product sense came before the title.</h2><p class="section-copy">My background combines engineering with design, teaching, marketing and direct client delivery. That mix is useful in product teams where technical decisions must still make sense to users and the business.</p></div>
+          <div class="timeline">
+            <div class="role"><small>2025 — Present · Fortaleza / Remote</small><h3>Co-Founder / Product & Software Engineer — HyperWorks Creative</h3><p>Custom software, AI automation, web products, product discovery, UX, integrations and production delivery; also supports marketing and paid-media operations.</p></div>
+            <div class="role"><small>May 2023 — 2024 · Fortaleza</small><h3>Professor of Design & UX/UI — Infinity School</h3><p>Taught Photoshop, Illustrator, Premiere Pro, UX/UI, photography and visual composition through project-based classes.</p></div>
+            <div class="role"><small>2022 — 2023 · Fortaleza</small><h3>Social Media Coordinator & Designer — Pait Consultoria</h3><p>Produced high-volume creative work for approximately 10 client accounts while maintaining brand consistency and campaign quality.</p></div>
+            <div class="role"><small>2022 — 2023 / 2025 — Present</small><h3>Advertising & Public Relations Consultant — Imobiliária Predimóveis</h3><p>Advertising, customer communication and lead-generation support for real-estate audiences.</p></div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div class="section-kicker">What I want to build next</div>
-        <h2>Software with product depth.</h2>
-        <p class="section-copy">I am especially interested in teams working on AI-native products, SaaS, developer tools, internal platforms, automation and full-stack products with meaningful backend complexity.</p>
+      <section id="skills" class="reveal">
+        <div class="section-kicker">Technology & engineering</div>
+        <h2>Built around product outcomes, not tool collecting.</h2>
+        <div class="skills">
+          <div class="skill-panel"><h3>Core stack</h3><div class="skill-list"><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span><span>FastAPI</span><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Redis</span><span>Celery</span><span>SQLAlchemy</span><span>Docker</span><span>Tailwind</span><span>Shadcn UI</span><span>Git / GitHub</span><span>Vercel</span><span>GitHub Actions</span><span>Tauri 2</span><span>Android</span><span>ML Kit</span><span>WordPress</span></div></div>
+          <div class="skill-panel"><h3>How I structure systems</h3><pre class="flow">Product problem
+     ↓
+Domain / workflow model
+     ↓
+UX + application boundary
+     ↓
+APIs / integrations / data
+     ↓
+Policy + authorization
+     ↓
+Idempotent execution
+     ↓
+Observability / recovery
+     ↓
+Production feedback</pre></div>
+        </div>
       </section>
 
-      <section id="contact">
+      <section id="ventures" class="reveal">
+        <div class="section-kicker">Entrepreneurial work</div>
+        <h2>Business, creative direction and community.</h2>
+        <p class="section-copy">Not every project is a software startup. These ventures sharpen commercial judgment, storytelling and the ability to build for real audiences.</p>
+        <div class="ventures">
+          <div class="venture"><div class="vmark">Marketing · Paid Media · Dev</div><h3>HyperWorks</h3><p>Marketing, paid traffic and custom software development. The operating business behind much of my client delivery and product experimentation.</p></div>
+          <div class="venture"><div class="vmark">Photography</div><h3>Dissora</h3><p>Photography and visual storytelling focused on authorial portrait work, creative direction and non-generic visual identity.</p></div>
+          <div class="venture"><div class="vmark">Geek commerce · Content</div><h3>Limiar Nerd</h3><p>Geek commerce and creator-led content across TCG, games, collectibles, 3D-printed products and community media.</p></div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="section-kicker">Education & mobility</div>
+        <div class="mobility">
+          <div class="box"><h2 style="font-size:2.2rem">Software engineering with a design foundation.</h2><p><strong>Bachelor's Degree in Software Engineering — Estácio</strong><br><span style="color:var(--muted)">2026 — Present</span></p><p><strong>Front End & UX/UI Design — Origamid</strong><br><span style="color:var(--muted)">Issued 2024</span></p><p><strong>Design Full Stack — Infinity School</strong><br><span style="color:var(--muted)">Issued 2024</span></p><p style="color:var(--muted)">I also bring several years of practical experience in branding, UI/UX, photography, video and digital marketing — useful context for product teams that care about both implementation and experience quality.</p></div>
+          <div class="box"><h3>Languages</h3><div class="language"><span>Portuguese</span><span>Native</span></div><div class="language"><span>English</span><span>Advanced / professional</span></div><div class="language"><span>Spanish</span><span>Fluent / professional</span></div><p style="color:var(--muted);margin-top:18px">Approximately two years living abroad. Open to relocation, employer-sponsored international opportunities and remote collaboration.</p></div>
+        </div>
+      </section>
+
+      <section id="contact" class="reveal">
         <div class="cta">
-          <div class="section-kicker">Let's talk</div>
-          <h2>Looking for an engineer who can connect product, design, AI and software?</h2>
-          <p>I'm open to remote and international opportunities across Product Engineering, Software Engineering, Full-Stack and Applied AI.</p>
-          <div class="actions">
-            <a class="btn primary" href="mailto:arqpaulosampaio@gmail.com">Start a conversation →</a>
-            <a class="btn" href="https://github.com/apolo1987" target="_blank" rel="noreferrer">View GitHub</a>
-          </div>
+          <div class="section-kicker">Open to opportunities</div>
+          <h2>Looking for a Product Engineer who can connect product, AI and production engineering?</h2>
+          <p>I'm targeting Product Engineer, Software Engineer, Full-Stack Product Engineer, Applied AI Engineer and Front-End/Product Engineer roles with international teams.</p>
+          <div class="actions"><a class="btn primary" href="mailto:paulo.hsampaiowork@gmail.com">paulo.hsampaiowork@gmail.com</a><a class="btn" href="resume.html">View resume</a><a class="btn" href="https://www.linkedin.com/in/paulohsampaio" target="_blank" rel="noreferrer">LinkedIn</a><a class="btn" href="https://github.com/apolo1987" target="_blank" rel="noreferrer">GitHub</a></div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span>Paulo Henrique Sampaio · Product & Software Engineering</span>
-      <span>AI · SaaS · Full Stack · Automation</span>
-    </footer>
+    <footer><span>© 2026 Paulo Henrique Sampaio</span><span>Product & Software Engineer · Fortaleza, Brazil · Open to relocation</span></footer>
   </div>
+  <script>
+    const items=document.querySelectorAll('.reveal');
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});
+    items.forEach(i=>io.observe(i));
+  </script>
 </body>
 </html>
