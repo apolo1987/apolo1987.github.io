@@ -2,228 +2,121 @@
 
 # Paulo Henrique Sampaio
 
-### Product & Software Engineer · AI Systems · Full-Stack · Product Engineering
+### Product & Software Engineer · AI Systems · Full-Stack Product Engineering
 
-**I build AI-native products, SaaS platforms and business automation systems — from product thinking and UX to backend architecture, integrations, reliability and deployment.**
+**I build AI-native products, business automation systems and full-stack software — from product discovery and UX to backend architecture, reliability and production deployment.**
 
-[![GitHub](https://img.shields.io/badge/GitHub-apolo1987-181717?style=for-the-badge&logo=github)](https://github.com/apolo1987)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-111827?style=for-the-badge&logo=vercel)](https://apolo1987.github.io)
-[![Email](https://img.shields.io/badge/Email-Contact-0A66C2?style=for-the-badge&logo=gmail)](mailto:arqpaulosampaio@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-111827?style=for-the-badge&logo=githubpages)](https://apolo1987.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-pauloHSampaio-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/paulohsampaio)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:paulo.hsampaiowork@gmail.com)
 
-**Open to international and remote software / product engineering opportunities.**
+**Fortaleza, Brazil · Open to relocation, international teams and employer-sponsored opportunities.**
 
 </div>
 
 ---
 
-## 🚀 What I build
+## Flagship: HIRO / Hyper OS
 
-I enjoy turning ambiguous business problems into working digital products. My strongest work sits at the intersection of **software engineering, AI, automation, product design and real-world operations**.
+**HIRO 7.0 Company Autopilot Web** is my main engineering project: an AI-native operations platform coordinating commercial, content, projects, meetings, team orchestration, finance, approvals, automation, observability and recovery.
 
-- 🤖 **Agentic & AI systems** — orchestration, tool use, deterministic safety boundaries, memory, context and human-in-the-loop execution
-- 🧩 **Full-stack products** — frontend, backend, databases, authentication, APIs and integrations
-- ⚙️ **Business automation** — CRM, workflows, documents, commercial operations, production and executive decision support
-- 📱 **Mobile & computer vision** — Android workflows, OCR and ML-assisted scanning
-- 🛡️ **Production-minded engineering** — RBAC, idempotency, audit trails, HMAC, fail-closed behavior, observability and CI quality gates
-- 🎨 **Product & UX thinking** — combining engineering decisions with visual design, usability and business outcomes
+Current production engineering highlights:
+
+- bounded agentic execution with explicit authority boundaries;
+- separation between AI reasoning, authorization and execution;
+- RBAC + workspace/owner isolation;
+- idempotency, audit, replay protection and stale-state checks;
+- durable internal work, recovery/dead-letter patterns and reconciliation;
+- Business Brain 2.0, Commercial Autopilot, Content Automation and Team Orchestration;
+- Windows/Desktop and Chrome Companion foundations for approved local context;
+- recorded production validation: **202 automated test files / 985 tests passed**, Next.js build passed, recorded post-deploy runtime scan with **0 errors**.
+
+`TypeScript` `Next.js` `React` `Supabase` `PostgreSQL` `AI Agents` `RBAC` `HMAC` `Idempotency` `Tauri`
+
+> Private commercial platform. Technical walkthrough available on request.
 
 ---
 
-## ⭐ Featured work
+## Selected Products
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🤖 HIRO / Hyper OS
-**AI-native Business Operations Platform**
-
-My flagship engineering project: a modular agentic platform designed to coordinate business operations across commercial, clients, production, finance, files, meetings and personal operating context.
-
-**Engineering highlights**
-- Channel-neutral application core
-- Capability & policy boundaries
-- Persistent context and memory provenance
-- Idempotent operations and replay protection
-- Human confirmation for sensitive effects
-- HMAC-authenticated remote capabilities
-- Observability and structured release gates
-- Large automated TypeScript/Vitest test suite
-
-`TypeScript` `Next.js` `React` `Supabase` `PostgreSQL` `AI` `Agentic Systems`
-
-> Private commercial project. Architecture and engineering walkthrough available on request.
-
-</td>
-<td width="50%" valign="top">
-
-### 📱 Deckora
-**Mobile TCG Scanner & Collection Experience**
-
-Android-focused Magic: The Gathering companion project exploring fast card scanning, native OCR and a visual-first mobile workflow.
-
-**Engineering highlights**
-- Android build pipeline
-- Native ML Kit text recognition
-- Camera/OCR scanning workflow
-- Web ↔ native bridge
-- Supabase-connected iterations
-- GitHub Actions Android CI
+### Deckora — Mobile TCG Scanner & Collection Experience
+Android-focused card scanner using camera workflows, native ML Kit OCR, a web/native bridge, Supabase-connected iterations and GitHub Actions build automation.
 
 `Android` `Java` `ML Kit` `OCR` `Supabase` `GitHub Actions`
 
-> Private project. Technical case study in preparation.
+### ZapCRM / HyperZap — AI-assisted WhatsApp CRM Foundation
+Python-oriented CRM SaaS foundation combining pipeline, campaigns, appointments, async background jobs and AI-assisted lead qualification with human handoff.
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 💬 ZapCRM
-**AI-Powered WhatsApp CRM SaaS**
-
-A multi-niche CRM foundation combining sales pipeline, WhatsApp conversations, AI lead qualification, campaigns and appointments.
-
-**Architecture**
-- React frontend
-- FastAPI async backend
-- PostgreSQL + SQLAlchemy
-- Redis + Celery background tasks
-- JWT authentication
-- WhatsApp Cloud API
-- AI-assisted lead qualification
-
-`Python` `FastAPI` `PostgreSQL` `Redis` `Celery` `React` `Docker`
+`Python` `FastAPI` `PostgreSQL` `SQLAlchemy` `Redis` `Celery` `React` `WhatsApp Cloud API`
 
 [View repository →](https://github.com/apolo1987/zapcrm)
 
-</td>
-<td width="50%" valign="top">
+### Registration & Document Automation
+Operational Next.js application for structured registrations, validation, Google integrations, document/data processing and XLSX workflows.
 
-### ⚙️ Business Workflow Automation
-**Registration, Documents & Google Integration**
-
-A real business workflow application built around structured registrations, validation, document/data processing and Google integrations.
-
-**Engineering highlights**
-- Next.js App Router
-- TypeScript
-- Zod validation
-- Google APIs
-- XLSX processing
-- Authentication middleware
-
-`Next.js` `TypeScript` `React` `Google APIs` `Zod`
-
-> Private operational project.
-
-</td>
-</tr>
-</table>
+`Next.js` `TypeScript` `React` `Google APIs` `Zod` `XLSX`
 
 ---
 
-## 🧠 Engineering focus
+## Selected Client Work
 
-```text
-Product problem
-     ↓
-Domain & workflow modeling
-     ↓
-UX / interface
-     ↓
-Application services
-     ↓
-APIs & integrations
-     ↓
-Data & persistence
-     ↓
-Security boundaries
-     ↓
-Testing / observability
-     ↓
-Deployment & iteration
-```
-
-I care about systems that are not only impressive in a demo, but also **understandable, recoverable and safe when they interact with real business data and external services**.
+- **Dra. Luciana Araújo** — healthcare conversion website and procedure landing experiences: https://draluaraujo.com
+- **Dr. Henrique Miranda** — multilingual PT/EN/ES professional website with SEO, consent-aware analytics and lead capture: https://henrique-miranda-psicologo.vercel.app
+- **Priscila Lemos / Ellorya** — psychology/personal-brand web presence: https://priscilafloreser.com.br
 
 ---
 
-## 🛠️ Technology
+## Engineering Stack
 
-### Core
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-
-### Data & backend
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-
-### Product & delivery
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-
-### Additional experience
-`REST APIs` · `OAuth` · `JWT` · `HMAC` · `RBAC` · `Webhooks` · `Celery` · `SQLAlchemy` · `NestJS` · `Android` · `ML Kit` · `WordPress`
+**Core:** TypeScript, JavaScript, Python, React, Next.js, FastAPI, Node.js  
+**Data:** PostgreSQL, Supabase, SQLAlchemy, Redis  
+**Automation:** Celery, background workers, webhooks, AI/LLM integrations  
+**Security & Reliability:** RBAC, HMAC, idempotency, audit, replay protection, fail-closed policies, recovery patterns  
+**Product & Delivery:** Git/GitHub, Vercel, GitHub Actions, Docker, Tailwind CSS, Shadcn UI, Figma, WordPress  
+**Mobile/Vision:** Android, Java bridge workflows, Google ML Kit, OCR  
 
 ---
 
-## 🔐 How I think about AI products
+## Experience
 
-I do not treat an LLM response as authority.
+**Co-Founder / Product & Software Engineer — HyperWorks Creative** · 2025–Present  
+Marketing, paid media and custom software development. I lead software/product work across discovery, UX, architecture, integrations, deployment and iteration.
 
-My agentic work uses explicit boundaries between **reasoning, authorization and execution**:
+**Professor of Design & UX/UI — Infinity School** · May 2023–2024  
+Taught Photoshop, Illustrator, Premiere Pro, UX/UI, photography and visual composition through project-based classes.
 
-```text
-Context / Memory
-      ↓
-AI reasoning
-      ↓
-Capability contract
-      ↓
-Policy / authorization
-      ↓
-Idempotency & workflow state
-      ↓
-Safe execution
-      ↓
-Audit / outcome
-```
-
-This makes AI useful without allowing natural language, historical context or model confidence to silently become permission for sensitive actions.
+**Social Media Coordinator & Designer — Pait Consultoria** · 2022–2023  
+Produced high-volume creative work across approximately 10 client accounts.
 
 ---
 
-## 🌍 What I am looking for
+## Entrepreneurial Work
 
-I am especially interested in international teams building:
-
-- AI-native products
-- SaaS platforms
-- Developer tools
-- Business automation
-- Internal platforms
-- Product-led software
-- Full-stack applications with meaningful backend complexity
-
-Roles that fit my direction include **Software Engineer, Product Engineer, Full-Stack Engineer, Front-End/Product Engineer and Applied AI Engineer**.
+- **HyperWorks** — Marketing, paid media and custom software development.
+- **Dissora** — Photography and visual storytelling.
+- **Limiar Nerd** — Geek commerce and content across TCG, games, collectibles and community media.
 
 ---
+
+## Education & Languages
+
+**Bachelor’s Degree in Software Engineering — Estácio** · 2026–Present  
+**Front End & UX/UI Design — Origamid** · 2024  
+**Design Full Stack — Infinity School** · 2024
+
+Portuguese — Native · English — Advanced / professional · Spanish — Fluent / professional  
+Approximately two years living abroad.
+
+---
+
+## Roles I’m targeting
+
+**Product Engineer · Software Engineer · Full-Stack Product Engineer · Applied AI Engineer · Front-End / Product Engineer**
 
 <div align="center">
 
-### Build useful things. Understand the system. Improve the product.
+### Open to relocation and international opportunities
 
-**Available for remote and international opportunities.**
-
-[GitHub](https://github.com/apolo1987) · [Portfolio](https://apolo1987.github.io) · [Email](mailto:arqpaulosampaio@gmail.com)
+[Portfolio](https://apolo1987.github.io) · [Resume](https://apolo1987.github.io/resume.html) · [LinkedIn](https://www.linkedin.com/in/paulohsampaio) · [GitHub](https://github.com/apolo1987) · [Email](mailto:paulo.hsampaiowork@gmail.com)
 
 </div>
